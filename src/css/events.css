@@ -1,0 +1,353 @@
+/* ===================================================
+EVENTS SECTION — MOBILE FIRST
+=================================================== */
+
+.events-section {
+width: 100%;
+
+
+padding: var(--spacing-vertical) var(--spacing-horizontal);
+
+background-color: var(--white);
+
+/* Linha roxa superior */
+border-top: 0.6rem solid var(--purple-600);
+
+
+}
+
+.events-container {
+width: 100%;
+max-width: var(--max-width-container);
+
+
+margin: 0 auto;
+
+
+}
+
+/* ===================================================
+CABEÇALHO
+=================================================== */
+
+.events-header {
+display: flex;
+flex-direction: column;
+align-items: center;
+
+
+gap: 1.6rem;
+
+margin-bottom: 3.2rem;
+
+text-align: center;
+
+
+}
+
+.events-title {
+margin: 0;
+
+
+font-size: 3.2rem;
+font-weight: 800;
+line-height: 1.15;
+
+color: var(--blue-gray-900);
+
+
+}
+
+/* Link "Explore Events" */
+
+.explore-link {
+display: inline-flex;
+align-items: center;
+
+
+gap: 0.8rem;
+
+font-size: 1.4rem;
+font-weight: 700;
+
+color: var(--purple-600);
+
+text-decoration: none;
+
+transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+
+
+}
+
+.explore-link:hover {
+color: var(--purple-700);
+
+
+transform: translateX(0.4rem);
+
+
+}
+
+.explore-link:focus-visible {
+outline: 0.2rem solid var(--purple-600);
+outline-offset: 0.4rem;
+
+
+border-radius: 0.4rem;
+
+
+}
+
+/* ===================================================
+GRID DE EVENTOS
+=================================================== */
+
+.events-grid {
+display: grid;
+
+
+grid-template-columns: 1fr;
+
+gap: 3.2rem;
+
+
+}
+
+/* ===================================================
+CARD
+=================================================== */
+
+.event-card {
+width: 100%;
+
+
+display: flex;
+flex-direction: column;
+
+
+}
+
+/* ===================================================
+IMAGEM
+=================================================== */
+
+.card-image-wrapper {
+position: relative;
+
+
+width: 100%;
+
+aspect-ratio: 16 / 9;
+
+margin-bottom: 1.6rem;
+
+border-radius: 1.2rem;
+
+overflow: hidden;
+
+
+}
+
+.card-image {
+display: block;
+
+
+width: 100%;
+height: 100%;
+
+object-fit: cover;
+
+transition: transform 0.3s ease;
+
+
+}
+
+.event-card:hover .card-image {
+transform: scale(1.04);
+}
+
+/* ===================================================
+BADGE
+=================================================== */
+
+.card-badge {
+position: absolute;
+
+top: 1.2rem;
+left: 1.2rem;
+
+padding: 0.4rem 1rem;
+
+background-color: rgba(255, 255, 255, 0.85);
+
+color: var(--purple-700);
+
+font-size: 1.1rem;
+font-weight: 700;
+
+border-radius: 0.6rem;
+
+backdrop-filter: blur(0.4rem);
+
+
+}
+
+/* ===================================================
+CONTEÚDO DO CARD
+=================================================== */
+
+.card-content {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+}
+
+.card-category {
+margin-bottom: 0.6rem;
+
+
+font-size: 1.2rem;
+font-weight: 600;
+
+color: var(--blue-gray-600);
+
+
+}
+
+.card-title {
+margin-bottom: 1.6rem;
+
+
+font-size: 2.2rem;
+font-weight: 800;
+line-height: 1.25;
+
+color: var(--blue-gray-900);
+
+
+}
+
+/* ===================================================
+LINK DE INGRESSOS
+=================================================== */
+
+.buy-tickets-link {
+display: inline-flex;
+align-items: center;
+
+
+gap: 0.8rem;
+
+font-size: 1.4rem;
+font-weight: 700;
+
+color: var(--purple-600);
+
+text-decoration: none;
+
+transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+
+
+}
+
+.buy-tickets-link:hover {
+color: var(--purple-700);
+
+
+transform: translateX(0.4rem);
+
+
+}
+
+.buy-tickets-link:focus-visible {
+outline: 0.2rem solid var(--purple-600);
+outline-offset: 0.4rem;
+
+
+border-radius: 0.4rem;
+
+
+}
+
+/* ===================================================
+SETAS
+=================================================== */
+
+.arrow {
+font-size: 1.4rem;
+}
+
+/* ===================================================
+TABLET / DESKTOP
+=================================================== */
+
+@media (min-width: 768px) {
+
+
+.events-section {
+    padding: 6rem 4rem;
+}
+
+
+/* Cabeçalho */
+
+.events-header {
+    flex-direction: row;
+
+    justify-content: space-between;
+
+    margin-bottom: 4rem;
+
+    text-align: left;
+}
+
+
+.events-title {
+    font-size: 4rem;
+}
+
+
+/* Grid */
+
+.events-grid {
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 2.4rem;
+}
+
+
+}
+
+/* ===================================================
+DESKTOP GRANDE
+=================================================== */
+
+@media (min-width: 1200px) {
+
+
+.events-grid {
+    gap: 3.2rem;
+}
+
+
+}
+
+/* ===================================================
+REDUÇÃO DE MOVIMENTO
+=================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+
+.card-image,
+.explore-link,
+.buy-tickets-link {
+    transition: none;
+}
+
+
+}
