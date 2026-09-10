@@ -1,0 +1,285 @@
+/* ================================================
+NAVBAR
+================================================ */
+
+nav {
+width: 100%;
+max-width: var(--max-width-nav, 110rem);
+
+
+margin: 1.2rem auto;
+padding: 0.8rem var(--spacing-horizontal);
+
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+background-color: var(--blue-gray-800);
+color: var(--white);
+
+border-radius: 2rem;
+
+position: relative;
+
+}
+
+/* ================================================
+LINKS GERAIS DO NAV
+================================================ */
+
+nav a {
+display: inline-block;
+padding: 1rem;
+
+color: var(--white);
+text-decoration: none;
+
+
+}
+
+/* ================================================
+LOGO
+================================================ */
+
+nav a.logo {
+font-size: 3.2rem;
+font-weight: 700;
+}
+
+/* ================================================
+BOTÃO HAMBÚRGUER
+================================================ */
+
+nav button.menu-toggle {
+display: flex;
+
+
+align-items: center;
+justify-content: center;
+
+padding: 0.5rem;
+
+background: transparent;
+border: none;
+
+cursor: pointer;
+
+transition: transform 0.2s ease-in-out;
+
+}
+
+nav button.menu-toggle:hover {
+transform: scale(1.1);
+}
+
+nav .menu-toggle img {
+width: 4.8rem;
+height: 4.8rem;
+}
+
+/* ================================================
+MENU MOBILE
+================================================ */
+
+.nav-menu {
+display: none;
+
+
+position: absolute;
+
+top: 100%;
+left: 0;
+
+width: 100%;
+
+flex-direction: column;
+align-items: center;
+
+padding: 2rem;
+
+gap: 2rem;
+
+background-color: var(--blue-gray-800);
+
+border-radius: 0 0 2rem 2rem;
+
+box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.4);
+
+z-index: 100;
+
+}
+
+/* Menu aberto pelo JavaScript */
+
+.nav-menu.active {
+display: flex;
+}
+
+/* ================================================
+LINKS DO MENU
+================================================ */
+
+.nav-links {
+display: flex;
+
+width: 100%;
+max-width: 30rem;
+
+flex-direction: column;
+align-items: center;
+
+gap: 1rem;
+
+padding: 0;
+
+list-style: none;
+
+}
+
+.nav-menu a {
+font-size: 1.6rem;
+
+padding-bottom: 0.4rem;
+
+border-bottom: 0.2rem solid transparent;
+
+transition:
+    color 0.2s ease-in-out,
+    border-color 0.2s ease-in-out;
+
+}
+
+.nav-menu a:hover {
+color: var(--purple-400);
+border-bottom-color: var(--purple-400);
+}
+
+/* ================================================
+AÇÕES
+================================================ */
+
+.nav-actions {
+display: flex;
+
+flex-direction: column;
+align-items: center;
+
+width: 100%;
+max-width: 24rem;
+
+gap: 1.6rem;
+
+}
+
+/* Botão Join */
+
+.nav-actions .btn-join {
+width: 100%;
+max-width: 16rem;
+
+padding: 1.2rem;
+
+background-color: var(--purple-600);
+color: var(--white);
+
+border: none;
+border-radius: 0.8rem;
+
+text-align: center;
+
+cursor: pointer;
+
+transition: background-color 0.2s ease-in-out;
+
+}
+
+.nav-actions .btn-join:hover {
+background-color: var(--purple-800);
+}
+
+/* ================================================
+BORDAS DO MENU MOBILE
+================================================ */
+
+@media (max-width: 767px) {
+
+nav:has(.nav-menu.active) {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+}
+
+/* ================================================
+DESKTOP
+================================================ */
+
+@media (min-width: 768px) {
+
+/* Esconde o hambúrguer */
+
+nav button.menu-toggle {
+    display: none;
+}
+
+
+/* Menu principal */
+
+.nav-menu {
+    position: static;
+
+    width: 100%;
+
+    display: flex !important;
+
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-left: 3.8rem;
+    padding: 0;
+
+    gap: 0;
+
+    background-color: transparent;
+
+    border-radius: 0;
+
+    box-shadow: none;
+}
+
+
+/* Links horizontais */
+
+.nav-links {
+    width: auto;
+    max-width: none;
+
+    flex-direction: row;
+    justify-content: flex-start;
+
+    gap: 1.6rem;
+}
+
+
+/* Ações horizontais */
+
+.nav-actions {
+    width: auto;
+    max-width: none;
+
+    flex-direction: row;
+    justify-content: flex-end;
+
+    gap: 1.6rem;
+}
+
+
+/* Botão Join desktop */
+
+.nav-actions .btn-join {
+    width: 12.7rem;
+    max-width: none;
+}
+
+}
