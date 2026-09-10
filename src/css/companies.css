@@ -1,0 +1,137 @@
+/* ===================================================
+COMPANIES SECTION
+=================================================== */
+
+.companies {
+width: 100%;
+
+
+padding: var(--spacing-vertical) var(--spacing-horizontal);
+
+display: flex;
+justify-content: center;
+
+
+}
+
+.companies-container {
+width: 100%;
+max-width: var(--max-width-container);
+
+
+text-align: center;
+
+
+}
+
+/* ===================================================
+TÍTULO
+=================================================== */
+
+.companies-title {
+margin-bottom: 3.2rem;
+
+
+font-size: 3.6rem;
+font-weight: 800;
+line-height: 1.2;
+
+color: var(--white);
+
+
+}
+
+/* ===================================================
+GRID DE EMPRESAS
+=================================================== */
+
+.companies-grid {
+width: 100%;
+
+
+display: flex;
+flex-wrap: wrap;
+
+justify-content: center;
+align-items: center;
+
+gap: 2.4rem 3.2rem;
+
+
+}
+
+/* ===================================================
+ITEM DA EMPRESA
+=================================================== */
+
+.company-item {
+display: flex;
+align-items: center;
+
+
+gap: 0.8rem;
+
+color: var(--white);
+
+font-size: 1.8rem;
+font-weight: 700;
+
+opacity: 0.9;
+
+
+}
+
+/* Logo da empresa */
+
+.company-item img {
+display: block;
+
+
+width: auto;
+height: 2.4rem;
+
+flex-shrink: 0;
+
+
+}
+
+/* ===================================================
+TABLET
+=================================================== */
+
+@media (min-width: 768px) {
+
+
+.companies {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.companies-title {
+    font-size: 4rem;
+}
+
+.companies-grid {
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+}
+
+/* ===================================================
+DESKTOP GRANDE
+=================================================== */
+
+@media (min-width: 1200px) {
+
+
+.companies-container {
+    max-width: 110rem;
+}
+
+.companies-grid {
+    flex-wrap: nowrap;
+}
+
+
+}
