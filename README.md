@@ -7,6 +7,8 @@ A aplicação apresenta o site de uma agência de tecnologia fictícia, com foco
 O projeto também possui integração com uma API REST, utilizada para carregar dinamicamente os dados exibidos na seção de depoimentos e clientes.
 
 🌐 Acesse o Projeto Online
+**[Clique aqui para acessar a aplicação
+online](https://vivi-2102.github.io/portfolio-b2b/)**
 
 O projeto está disponível para visualização pelo GitHub Pages:
 
